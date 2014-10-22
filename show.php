@@ -9,7 +9,7 @@
     <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-	<section id="gallery">
+	<section class="success" id="gallery">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 col-lg-offset-2">
