@@ -1,8 +1,8 @@
 <html>
 <body>
 
-Welcome <?php echo $_GET["name"]; ?><br>
-Your email address is: <?php echo $_GET['employer']; ?>
+Welcome <?php echo $_POST["name"]; ?><br>
+Your email address is: <?php echo $_POST['employer']; ?>
 
 </body>
 </html>
