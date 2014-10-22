@@ -22,8 +22,9 @@
 					<span>Then the Employer is</span>
 					<p><?php echo $_POST['employer']; ?></p>
 				</div>
-				
-
+				<div class="col-lg-8 col-lg-offset-2">
+					<label></label>
+				</div>
 			</div>
 		</div>
 	</section>
