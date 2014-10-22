@@ -5,31 +5,37 @@
     <link href="css/freelancer.css" rel="stylesheet">
 	<!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div class="row">
-	<div class="col-lg-12 text-center">
-		<h2>Add Application</h2>
-		<hr class="star-primary">
-	</div>
-</div>
-<div class="row">
-	<div class="col-lg-8 col-lg-offset-2">
-		<form role="form" action="show.php" method="post">
-			<div class="form-group">
-				<div class="form-group col-xs-12 floating-label-form-group controls">
-					<label>Position Name</label>
-					<input type="text" class="form-control" placeholder="Position Name" name="name">
-				</div>
-				<div class="form-group col-xs-12 floating-label-form-group controls">
-					<label>Employer Information</label>
-					<input type="text" class="form-control" placeholder="Employer" name="employer">
-				</div>
-				<input type="submit" class="btn btn-success">
+<section id="new application form">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h2>Add Application</h2>
+				<hr class="star-primary">
 			</div>
-		</form>
+		</div>
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2">
+				<form role="form" action="show.php" method="post">
+					<div class="form-group">
+						<div class="form-group col-xs-12 floating-label-form-group controls">
+							<label>Position Name</label>
+							<input type="text" class="form-control" placeholder="Position Name" name="name">
+						</div>
+						<div class="form-group col-xs-12 floating-label-form-group controls">
+							<label>Employer Information</label>
+							<input type="text" class="form-control" placeholder="Employer" name="employer">
+						</div>
+						<input type="submit" class="btn btn-success">
+					</div>
+				</form>
+			</div>
+		</div>
 	</div>
-</div>
+</section>
 
  <!-- Footer -->
     <footer class="text-center">
