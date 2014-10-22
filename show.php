@@ -1,6 +1,3 @@
+<h1> <?php echo $_GET["name"]; ?> </h1>
 
-<?php 
-echo "<h1> this is the other page</h1>";
-
-?>
 
