@@ -1,7 +1,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-	<title>New Application</title>
+	<title>Lab8 New Job Post</title>
 	<!-- Custom CSS -->
     <link href="css/freelancer.css" rel="stylesheet">
 	<!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
@@ -12,39 +12,92 @@
     <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 </head>
 <body>
-<section id="new application form">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12 text-center">
-				<h2>Add Application</h2>
-				<hr class="star-primary">
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-lg-8 col-lg-offset-2">
-				<form role="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-					<div class="form-group">
-						<div class="form-group col-xs-12 floating-label-form-group controls">
-							<label>Position Name</label>
-							<input type="text" class="form-control" placeholder="Position Name" name="name">
-						</div>
-						<div class="form-group col-xs-12 floating-label-form-group controls">
-							<label>Employer Information</label>
-							<input type="text" class="form-control" placeholder="Employer" name="employer">
-						</div>
-                        <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Position Description</label>
-                            <input type="text" class="form-control" placeholder="Job Description" name="description">
-                        </div>
-						<div class="form-group col-xs-12">
-                                <button type="submit" class="btn btn-success btn-lg">Submit</button>
+    <!-- PHP Form Validation Code -->
+    <?php
+    // define variables and set to empty values
+    $nameErr = $emailErr = $genderErr = $websiteErr = "";
+    $name = $email = $gender = $comment = $website = "";
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+       if (empty($_POST["name"])) {
+         $nameErr = "Name is required";
+       } else {
+         $name = test_input($_POST["name"]);
+         // check if name only contains letters and whitespace
+         if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+           $nameErr = "Only letters and white space allowed"; 
+         }
+       }
+       
+       if (empty($_POST["website"])) {
+         $website = "";
+       } else {
+         $website = test_input($_POST["website"]);
+         // check if URL address syntax is valid (this regular expression also allows dashes in the URL)
+         if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$website)) {
+           $websiteErr = "Invalid URL"; 
+         }
+       }
+
+       if (empty($_POST["description"])) {
+         $description = "";
+       } else {
+         $comment = test_input($_POST["description"]);
+       }
+
+       if (empty($_POST["visarqment"])) {
+         $visarqmentErr = "VISA Requirement is required";
+       } else {
+         $gender = test_input($_POST["visarqment"]);
+       }
+    }
+
+    function test_input($data) {
+       $data = trim($data);
+       $data = stripslashes($data);
+       $data = htmlspecialchars($data);
+       return $data;
+    }
+    ?>
+    <!-- Input Form -->
+    <section id="new application form">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-lg-12 text-center">
+    				<h2>Post New Job</h2>
+                    <span>Kaichang Wu</span>
+    				<hr class="star-primary">
+    			</div>
+    		</div>
+    		<div class="row">
+    			<div class="col-lg-8 col-lg-offset-2">
+    				<form role="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+    					<div class="form-group">
+    						<div class="form-group col-xs-12 floating-label-form-group controls">
+    							<label>Position Name</label>
+    							<input type="text" class="form-control" placeholder="Position Name" name="name">
+    						</div>
+    						<div class="form-group col-xs-12 floating-label-form-group controls">
+    							<label>Employer Information</label>
+    							<input type="text" class="form-control" placeholder="Employer" name="employer">
+    						</div>
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Position Description</label>
+                                <input type="text" class="form-control" placeholder="Job Description" name="description">
                             </div>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-</section>
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Visa Requirement</label>
+                                <input type="radio" class="form-control"  name="visarqment">
+                            </div>
+    						<div class="form-group col-xs-12">
+                                    <button type="submit" class="btn btn-success btn-lg">Submit</button>
+                                </div>
+    					</div>
+    				</form>
+    			</div>
+    		</div>
+    	</div>
+    </section>
     <!-- Result printout area -->
     <section class="success" id="gallery">
             <div class="container">
@@ -64,10 +117,6 @@
                 </div>
             </div>
     </section>
-
-
-
-
     <!-- Footer -->
     <footer class="text-center">
         <div class="footer-above">
