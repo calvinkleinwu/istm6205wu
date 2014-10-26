@@ -84,10 +84,10 @@
                             </div>
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Position Type</label>
-                                <select class="form_control" placeholder="Position Type" name="positiontype" value="<?php echo $positiontype ?>" >
-                                    <option value="Full-Time">Full-Time</option>
-                                    <option value="Part-Time">Part-Time</option>
-                                    <option value="Internship">Internship</option>
+                                <select class="form_control" placeholder="Position Type" name="positiontype"  >
+                                    <option <?php if (isset($positiontype)&& $positiontype=="Full-Time") echo "checked";?> value="Full-Time">Full-Time</option>
+                                    <option <?php if (isset($positiontype)&& $positiontype=="Part-Time") echo "checked";?> value="Part-Time">Part-Time</option>
+                                    <option <?php if (isset($positiontype)&& $positiontype=="Internship") echo "selected";?> value="Internship">Internship</option>
                                 </select>
                             </div>
                             <div class="form-group col-xs-12 floating-label-form-group controls">
@@ -106,23 +106,23 @@
     <section class="success" id="gallery">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
+                    <div class="col-lg-8 col-lg-offset-2 result">
                         <label>The Position You Are Intrested in is:</label>
                         <p><?php echo $_POST["name"]; ?></p>
                     </div>
-                    <div class="col-lg-8 col-lg-offset-2">
+                    <div class="col-lg-8 col-lg-offset-2 result">
                         <label>Then the Employer is</label>
                         <p><?php echo $_POST['employer']; ?></p>
                     </div>
-                    <div class="col-lg-8 col-lg-offset-2">
+                    <div class="col-lg-8 col-lg-offset-2 result" >
                         <label>Job Description</label>
                         <p><?php echo $_POST['description']; ?></p>
                     </div>
-                    <div class="col-lg-8 col-lg-offset-2">
+                    <div class="col-lg-8 col-lg-offset-2 result">
                         <label>Position Type</label>
                         <p><?php echo $_POST['positiontype']; ?></p>
                     </div>
-                    <div class="col-lg-8 col-lg-offset-2">
+                    <div class="col-lg-8 col-lg-offset-2 result">
                         <label>Visa Requirement</label>
                         <p><?php echo $_POST['visarqment']; ?></p>
                     </div>

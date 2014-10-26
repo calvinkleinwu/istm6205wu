@@ -426,3 +426,7 @@ footer .footer-below {
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
 }
+.result{
+    border-bottom: 5px;
+    border-color:  #2c3e50;
+}
