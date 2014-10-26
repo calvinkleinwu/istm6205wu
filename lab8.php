@@ -93,7 +93,6 @@
                                 </select>
                             </div>
                             <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Visa Requirement</label> 
                                 <input type="checkbox" name="visarqment" value="H1B Required">Require H1B Now or Future
                             </div>
     						<div class="form-group col-xs-12">
@@ -122,7 +121,7 @@
                         <p><?php echo $_POST['description']; ?></p>
                     </div>
                     <div class="col-lg-8 col-lg-offset-2">
-                        <span>Job Description</span>
+                        <span>Position Type</span>
                         <p><?php echo $_POST['positiontype[]']; ?></p>
                     </div>
                     <div class="col-lg-8 col-lg-offset-2">
