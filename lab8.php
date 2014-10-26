@@ -91,7 +91,7 @@
                                 </select>
                             </div>
                             <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <input type="checkbox" name="visarqment" <?php if (isset($visarqment)) echo "checked";?> value="H1B Required" >Require H1B Now or Future
+                                <input type="checkbox" name="visarqment" <?php if (isset($visarqment)&& $visarqment=="H1B Required") echo "checked";?> value="H1B Required" >Require H1B Now or Future
                             </div>
     						<div class="form-group col-xs-12">
                                     <button type="submit" class="btn btn-success btn-lg">Submit</button>
