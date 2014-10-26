@@ -74,7 +74,7 @@
     				<form role="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
     					<div class="form-group">
     						<div class="form-group col-xs-12 floating-label-form-group controls">
-    							<label>Position Name</label>
+    							<span>Position Name</span>
     							<input type="text" class="form-control" placeholder="Position Name" name="name">
     						</div>
     						<div class="form-group col-xs-12 floating-label-form-group controls">
