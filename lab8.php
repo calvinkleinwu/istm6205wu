@@ -86,9 +86,16 @@
                                 <input type="text" class="form-control" placeholder="Job Description" name="description">
                             </div>
                             <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <span>Visa Requirement</span>
-                                <input type="radio" class="form-control"  name="visarqment">H1B
-                                <input type="radio" class="form-control"  name="visarqment">Non-H1B
+                                <span>Position Type</span>
+                                <select class="form_control" placeholder="Position Type" name="positiontype">
+                                    <option>Full-Time</option>
+                                    <option>Part-time</option>
+                                    <option>Internship</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Visa Requirement</label> 
+                                <input class="checkbox" name="visarqment" >Require H1B Now or Future
                             </div>
     						<div class="form-group col-xs-12">
                                     <button type="submit" class="btn btn-success btn-lg">Submit</button>
@@ -104,19 +111,19 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
-                        <span><h2>The Position You Are Intrested in is:</h2></span>
+                        <span>The Position You Are Intrested in is:</span>
                         <p><?php echo $_POST["name"]; ?></p>
                     </div>
                     <div class="col-lg-8 col-lg-offset-2">
-                        <span><h2>Then the Employer is</h2></span>
+                        <span>Then the Employer is</span>
                         <p><?php echo $_POST['employer']; ?></p>
                     </div>
                     <div class="col-lg-8 col-lg-offset-2">
-                        <span><h2>Job Description</h2></span>
+                        <span>Job Description</span>
                         <p><?php echo $_POST['description']; ?></p>
                     </div>
                     <div class="col-lg-8 col-lg-offset-2">
-                        <span><h2>Visa Requirement</h2></span>
+                        <span>Visa Requirement</span>
                         <p><?php echo $_POST['visarqment']; ?></p>
                     </div>
 
