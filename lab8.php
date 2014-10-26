@@ -65,17 +65,17 @@
     					<div class="form-group">
     						<div class="form-group col-xs-12 floating-label-form-group controls">
     							<label>Position Name</label>
-    							<input type="text" class="form-control" placeholder="Position Name" name="name" value="<?php echo $name ?>">
+    							<input type="text" class="form-control" placeholder="Position Name" name="name" value="<?php echo $name; ?>">
                                 <span class="error">* <?php echo $nameErr;?></span>
     						</div>
     						<div class="form-group col-xs-12 floating-label-form-group controls">
     							<label>Employer Information</label>
-    							<input type="text" class="form-control" placeholder="Employer" name="employer" value="<?php echo $employer ?>">
+    							<input type="text" class="form-control" placeholder="Employer" name="employer" value="<?php echo $employer; ?>">
 
     						</div>
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Position Description</label>
-                                <input type="text" class="form-control" placeholder="Job Description" name="description" value="<?php echo $description ?>">
+                                <input type="text" class="form-control" placeholder="Job Description" name="description" value="<?php echo $description; ?>">
                             </div>
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Position Type</label>
