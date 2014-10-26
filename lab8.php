@@ -70,7 +70,6 @@
     						<div class="form-group col-xs-12 floating-label-form-group controls">
     							<label>Employer Information</label>
     							<input type="text" class="form-control" placeholder="Employer" name="employer">
-                                <span class="error">* <?php echo $employer;?></span>
     						</div>
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Position Description</label>
@@ -79,10 +78,10 @@
                             </div>
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Position Type</label>
-                                <select class="form_control" placeholder="Position Type" name="positiontype[]">
-                                    <option>Full-Time</option>
-                                    <option>Part-time</option>
-                                    <option>Internship</option>
+                                <select class="form_control" placeholder="Position Type" name="positiontype">
+                                    <option value="Full-Time">Full-Time</option>
+                                    <option value="Part-Time">Part-Time</option>
+                                    <option value="Internship">Internship</option>
                                 </select>
                             </div>
                             <div class="form-group col-xs-12 floating-label-form-group controls">
