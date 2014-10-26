@@ -82,12 +82,12 @@
                                 <label>Position Description</label>
                                 <input type="text" class="form-control" placeholder="Job Description" name="description" value="<?php echo $description; ?>">
                             </div>
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <div class="form-group col-xs-12 floating-label-form-group controls " id="special select">
                                 <label>Position Type</label>
                                 <select class="form_control" placeholder="Position Type" name="positiontype"  >
-                                    <option <?php if (isset($positiontype)&& $positiontype=="Full-Time") echo "checked";?> value="Full-Time">Full-Time</option>
-                                    <option <?php if (isset($positiontype)&& $positiontype=="Part-Time") echo "checked";?> value="Part-Time">Part-Time</option>
-                                    <option <?php if (isset($positiontype)&& $positiontype=="Internship") echo "selected";?> value="Internship">Internship</option>
+                                    <option value="Full-Time">Full-Time</option>
+                                    <option value="Part-Time">Part-Time</option>
+                                    <option value="Internship">Internship</option>
                                 </select>
                             </div>
                             <div class="form-group col-xs-12 floating-label-form-group controls">
@@ -107,23 +107,23 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 result">
-                        <label>The Position You Are Intrested in is:</label>
+                        <h3>The Position You are Intrested in is:</h3>
                         <p><?php echo $_POST["name"]; ?></p>
                     </div>
                     <div class="col-lg-8 col-lg-offset-2 result">
-                        <label>Then the Employer is</label>
+                        <h3>Then the Employer is</h3>
                         <p><?php echo $_POST['employer']; ?></p>
                     </div>
                     <div class="col-lg-8 col-lg-offset-2 result" >
-                        <label>Job Description</label>
+                        <h3>Job Description</h3>
                         <p><?php echo $_POST['description']; ?></p>
                     </div>
                     <div class="col-lg-8 col-lg-offset-2 result">
-                        <label>Position Type</label>
+                        <h3>Position Type</h3>
                         <p><?php echo $_POST['positiontype']; ?></p>
                     </div>
                     <div class="col-lg-8 col-lg-offset-2 result">
-                        <label>Visa Requirement</label>
+                        <h3>Visa Requirement</h3>
                         <p><?php echo $_POST['visarqment']; ?></p>
                     </div>
 
@@ -177,9 +177,10 @@
         </div>
     </footer>
     <!-- /Footer -->
+    <script src="js/jquery-1.11.0.js"></script>
      <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
     <!-- Custom Theme JavaScript -->
-    <script src="js/freelancer.js"></script>
+    <script src="js/lab8.js"></script>
 </body>
 </html> 
