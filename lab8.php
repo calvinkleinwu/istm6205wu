@@ -43,7 +43,7 @@
        if (empty($_POST["visarqment"])) {
          $visarqmentErr = "";
        } else {
-         $gender = test_input($_POST["visarqment"]);
+         $visarqment = test_input($_POST["visarqment"]);
        }
     }
 
@@ -84,14 +84,14 @@
                             </div>
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Position Type</label>
-                                <select class="form_control" placeholder="Position Type" name="positiontype" "<?php echo $positiontype ?>">
+                                <select class="form_control" placeholder="Position Type" name="positiontype" value="<?php echo $positiontype ?>" >
                                     <option value="Full-Time">Full-Time</option>
                                     <option value="Part-Time">Part-Time</option>
                                     <option value="Internship">Internship</option>
                                 </select>
                             </div>
                             <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <input type="checkbox" name="visarqment" value="H1B Required" <?php if (isset($visarqment)) echo "checked";?>>Require H1B Now or Future
+                                <input type="checkbox" name="visarqment" <?php if (isset($visarqment)) echo "checked";?> value="H1B Required" >Require H1B Now or Future
                             </div>
     						<div class="form-group col-xs-12">
                                     <button type="submit" class="btn btn-success btn-lg">Submit</button>
