@@ -22,7 +22,7 @@
 		</div>
 		<div class="row">
 			<div class="col-lg-8 col-lg-offset-2">
-				<form role="form" action="<?php echo htmlspecialchars(_SERVER["PHP_SELF"]);?>" method="post">
+				<form role="form" action="<?php echo htmlspecialchars(_SERVER["PHP_SELF"]); ?>" method="post">
 					<div class="form-group">
 						<div class="form-group col-xs-12 floating-label-form-group controls">
 							<label>Position Name</label>
@@ -83,24 +83,9 @@ function test_input($data) {
    $data = htmlspecialchars($data);
    return $data;
 }
+
 ?>
 
-<h2>PHP Form Validation Example</h2>
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
-   Name: <input type="text" name="name">
-   <br><br>
-   E-mail: <input type="text" name="email">
-   <br><br>
-   Website: <input type="text" name="website">
-   <br><br>
-   Comment: <textarea name="comment" rows="5" cols="40"></textarea>
-   <br><br>
-   Gender:
-   <input type="radio" name="gender" value="female">Female
-   <input type="radio" name="gender" value="male">Male
-   <br><br>
-   <input type="submit" name="submit" value="Submit"> 
-</form>
 
     <!-- Footer -->
     <footer class="text-center">
