@@ -65,29 +65,28 @@
     					<div class="form-group">
     						<div class="form-group col-xs-12 floating-label-form-group controls">
     							<label>Position Name</label>
-    							<input type="text" class="form-control" placeholder="Position Name" name="name">
+    							<input type="text" class="form-control" placeholder="Position Name" name="name" value="<?php echo $name ?>">
                                 <span class="error">* <?php echo $nameErr;?></span>
     						</div>
     						<div class="form-group col-xs-12 floating-label-form-group controls">
     							<label>Employer Information</label>
-    							<input type="text" class="form-control" placeholder="Employer" name="employer">
+    							<input type="text" class="form-control" placeholder="Employer" name="employer" value="<?php echo $employer ?>">
+
     						</div>
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Position Description</label>
-                                <input type="text" class="form-control" placeholder="Job Description" name="description">
-                                <?php echo $description;?>
+                                <input type="text" class="form-control" placeholder="Job Description" name="description" value="<?php echo $description ?>">
                             </div>
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Position Type</label>
-                                <select class="form_control" placeholder="Position Type" name="positiontype">
+                                <select class="form_control" placeholder="Position Type" name="positiontype" "<?php echo $positiontype ?>">
                                     <option value="Full-Time">Full-Time</option>
                                     <option value="Part-Time">Part-Time</option>
                                     <option value="Internship">Internship</option>
                                 </select>
                             </div>
                             <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <input type="checkbox" name="visarqment" value="H1B Required">Require H1B Now or Future
-                                <?php if (isset($visarqment)) echo "checked";?>
+                                <input type="radio" name="visarqment" value="H1B Required" <?php if (isset($visarqment)) echo "checked";?>>Require H1B Now or Future
                             </div>
     						<div class="form-group col-xs-12">
                                     <button type="submit" class="btn btn-success btn-lg">Submit</button>
