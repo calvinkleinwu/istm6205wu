@@ -45,46 +45,27 @@
 		</div>
 	</div>
 </section>
-<!-- Result printout area -->
-<section class="success" id="gallery">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <span>The Position You Are Intrested in is:</span>
-                    <p><?php echo $_POST["name"]; ?></p>
-                </div>
-                <div class="col-lg-8 col-lg-offset-2">
-                    <span>Then the Employer is</span>
-                    <p><?php echo $_POST['employer']; ?></p>
-                </div>
-                <div class="col-lg-8 col-lg-offset-2">
-                    <span>Job Description</span>
-                    <p><?php echo $_POST['description']; ?></p>
+    <!-- Result printout area -->
+    <section class="success" id="gallery">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <span>The Position You Are Intrested in is:</span>
+                        <p><?php echo $_POST["name"]; ?></p>
+                    </div>
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <span>Then the Employer is</span>
+                        <p><?php echo $_POST['employer']; ?></p>
+                    </div>
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <span>Job Description</span>
+                        <p><?php echo $_POST['description']; ?></p>
+                    </div>
                 </div>
             </div>
-        </div>
     </section>
 
 
-<?php
-// define variables and set to empty values
-$name = $employer = $description = $H1B = "";
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-   $name = test_input($_POST["name"]);
-   $employer = test_input($_POST["employer"]);
-   $description = test_input($_POST["description"]);
-   $H1B = test_input($_POST["H1B"]);
-}
-
-function test_input($data) {
-   $data = trim($data);
-   $data = stripslashes($data);
-   $data = htmlspecialchars($data);
-   return $data;
-}
-
-?>
 
 
     <!-- Footer -->
