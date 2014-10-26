@@ -3,6 +3,7 @@
     <meta charset="utf-8">
 	<title>Lab8 New Job Post</title>
 	<!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="lab8.css">
 	<!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom Fonts -->
@@ -102,23 +103,23 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
-                        <span>The Position You Are Intrested in is:</span>
+                        <label>The Position You Are Intrested in is:</label>
                         <p><?php echo $_POST["name"]; ?></p>
                     </div>
                     <div class="col-lg-8 col-lg-offset-2">
-                        <span>Then the Employer is</span>
+                        <label>Then the Employer is</label>
                         <p><?php echo $_POST['employer']; ?></p>
                     </div>
                     <div class="col-lg-8 col-lg-offset-2">
-                        <span>Job Description</span>
+                        <label>Job Description</label>
                         <p><?php echo $_POST['description']; ?></p>
                     </div>
                     <div class="col-lg-8 col-lg-offset-2">
-                        <span>Position Type</span>
+                        <label>Position Type</label>
                         <p><?php echo $_POST['positiontype']; ?></p>
                     </div>
                     <div class="col-lg-8 col-lg-offset-2">
-                        <span>Visa Requirement</span>
+                        <label>Visa Requirement</label>
                         <p><?php echo $_POST['visarqment']; ?></p>
                     </div>
 
