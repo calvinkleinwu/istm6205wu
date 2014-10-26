@@ -14,8 +14,8 @@
     <!-- PHP Form Validation Code -->
     <?php
     // define variables and set to empty values
-    $nameErr = $emailErr = $genderErr = $websiteErr = "";
-    $name = $email = $gender = $comment = $website = "";
+    $nameErr = $emailErr = $genderErr =  "";
+    $name = $employer = $description = $positiontype = $visarqment = "";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
        if (empty($_POST["name"])) {
@@ -27,16 +27,6 @@
            $nameErr = "Only letters and white space allowed"; 
          }
        }
-       
-       if (empty($_POST["website"])) {
-         $website = "";
-       } else {
-         $website = test_input($_POST["website"]);
-         // check if URL address syntax is valid (this regular expression also allows dashes in the URL)
-         if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$website)) {
-           $websiteErr = "Invalid URL"; 
-         }
-       }
 
        if (empty($_POST["description"])) {
          $description = "";
@@ -45,7 +35,7 @@
        }
 
        if (empty($_POST["visarqment"])) {
-         $visarqmentErr = "VISA Requirement is required";
+         $visarqmentErr = "";
        } else {
          $gender = test_input($_POST["visarqment"]);
        }
@@ -75,14 +65,17 @@
     						<div class="form-group col-xs-12 floating-label-form-group controls">
     							<label>Position Name</label>
     							<input type="text" class="form-control" placeholder="Position Name" name="name">
+                                <span class="error">* <?php echo $nameErr;?></span>
     						</div>
     						<div class="form-group col-xs-12 floating-label-form-group controls">
     							<label>Employer Information</label>
     							<input type="text" class="form-control" placeholder="Employer" name="employer">
+                                <span class="error">* <?php echo $employer;?></span>
     						</div>
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Position Description</label>
                                 <input type="text" class="form-control" placeholder="Job Description" name="description">
+                                <?php echo $description;?>
                             </div>
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Position Type</label>
@@ -94,6 +87,7 @@
                             </div>
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <input type="checkbox" name="visarqment" value="H1B Required">Require H1B Now or Future
+                                <?php if (isset($visarqment)) echo "checked";?>
                             </div>
     						<div class="form-group col-xs-12">
                                     <button type="submit" class="btn btn-success btn-lg">Submit</button>
@@ -122,7 +116,7 @@
                     </div>
                     <div class="col-lg-8 col-lg-offset-2">
                         <span>Position Type</span>
-                        <p><?php echo $_POST['positiontype[]']; ?></p>
+                        <p><?php echo $_POST['positiontype']; ?></p>
                     </div>
                     <div class="col-lg-8 col-lg-offset-2">
                         <span>Visa Requirement</span>
