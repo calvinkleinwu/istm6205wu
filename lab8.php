@@ -28,11 +28,16 @@
            $nameErr = "Only letters and white space allowed"; 
          }
        }
+       if (empty($_POST["employer"])) {
+         $employer = "";
+       } else {
+         $employer = test_input($_POST["employer"]);
+       }
 
        if (empty($_POST["description"])) {
          $description = "";
        } else {
-         $comment = test_input($_POST["description"]);
+         $description = test_input($_POST["description"]);
        }
 
        if (empty($_POST["visarqment"])) {
