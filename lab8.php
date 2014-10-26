@@ -22,7 +22,7 @@
 		</div>
 		<div class="row">
 			<div class="col-lg-8 col-lg-offset-2">
-				<form role="form" action="show.php" method="post">
+				<form role="form" action="<?php echo htmlspecialchars(_SERVER["PHP_SELF"]);?>" method="post">
 					<div class="form-group">
 						<div class="form-group col-xs-12 floating-label-form-group controls">
 							<label>Position Name</label>
@@ -34,7 +34,7 @@
 						</div>
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Position Description</label>
-                            <input type="text" class="form-control" placeholder="Job Description" name="employer">
+                            <input type="text" class="form-control" placeholder="Job Description" name="description">
                         </div>
 						<div class="form-group col-xs-12">
                                 <button type="submit" class="btn btn-success btn-lg">Submit</button>
@@ -45,22 +45,36 @@
 		</div>
 	</div>
 </section>
-<!DOCTYPE HTML> 
-<html>
-<head>
-</head>
-<body> 
+<!-- Result printout area -->
+<section class="success" id="gallery">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <span>The Position You Are Intrested in is:</span>
+                    <p><?php echo $_POST["name"]; ?></p>
+                </div>
+                <div class="col-lg-8 col-lg-offset-2">
+                    <span>Then the Employer is</span>
+                    <p><?php echo $_POST['employer']; ?></p>
+                </div>
+                <div class="col-lg-8 col-lg-offset-2">
+                    <span>Job Description</span>
+                    <p><?php echo $_POST['description']; ?></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 <?php
 // define variables and set to empty values
-$name = $email = $gender = $comment = $website = "";
+$name = $employer = $description = $H1B = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
    $name = test_input($_POST["name"]);
-   $email = test_input($_POST["email"]);
-   $website = test_input($_POST["website"]);
-   $comment = test_input($_POST["comment"]);
-   $gender = test_input($_POST["gender"]);
+   $employer = test_input($_POST["employer"]);
+   $description = test_input($_POST["description"]);
+   $H1B = test_input($_POST["H1B"]);
 }
 
 function test_input($data) {
@@ -88,23 +102,7 @@ function test_input($data) {
    <input type="submit" name="submit" value="Submit"> 
 </form>
 
-<?php
-echo "<h2>Your Input:</h2>";
-echo $name;
-echo "<br>";
-echo $email;
-echo "<br>";
-echo $website;
-echo "<br>";
-echo $comment;
-echo "<br>";
-echo $gender;
-?>
-
-</body>
-</html>
-
- <!-- Footer -->
+    <!-- Footer -->
     <footer class="text-center">
         <div class="footer-above">
             <div class="container">
