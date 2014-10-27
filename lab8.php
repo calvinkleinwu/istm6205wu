@@ -15,8 +15,8 @@
     <!-- PHP Form Validation Code -->
     <?php
     // define variables and set to empty values
-    $nameErr = $emailErr = $genderErr =  "";
-    $name = $employer = $description = $positiontype = $visarqment = "";
+    $nameErr =  "";
+    $name = $employer = $description = $positiontype = $visarqment = $location = "";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
        if (empty($_POST["name"])) {
@@ -40,10 +40,20 @@
          $description = test_input($_POST["description"]);
        }
 
+       if (empty($_POST["positiontype"])) {
+         $positiontype = "";
+       } else {
+         $positiontype = test_input($_POST["positiontype"]);
+       }
        if (empty($_POST["visarqment"])) {
          $visarqmentErr = "";
        } else {
          $visarqment = test_input($_POST["visarqment"]);
+       }
+       if (empty($_POST["location"])) {
+         $location = "";
+       } else {
+         $location = test_input($_POST["location"]);
        }
     }
 
@@ -56,51 +66,61 @@
     ?>
     <!-- Input Form -->
     <section id="new application form">
-    	<div class="container">
-    		<div class="row">
-    			<div class="col-lg-12 text-center">
-    				<h2>Post New Job</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Post New Job</h2>
                     <span>Kaichang Wu</span>
-    				<hr class="star-primary">
-    			</div>
-    		</div>
-    		<div class="row">
-    			<div class="col-lg-8 col-lg-offset-2">
-    				<form role="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-    					<div class="form-group">
-    						<div class="form-group col-xs-12 floating-label-form-group controls">
-    							<label>Position Name</label>
-    							<input type="text" class="form-control" placeholder="Position Name" name="name" value="<?php echo $name; ?>">
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <form role="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+                        <div class="form-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Position Name</label>
+                                <input type="text" class="form-control" placeholder="Position Name" name="name" value="<?php echo $name; ?>">
                                 <span class="error">* <?php echo $nameErr;?></span>
-    						</div>
-    						<div class="form-group col-xs-12 floating-label-form-group controls">
-    							<label>Employer Information</label>
-    							<input type="text" class="form-control" placeholder="Employer" name="employer" value="<?php echo $employer; ?>">
+                            </div>
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Employer Information</label>
+                                <input type="text" class="form-control" placeholder="Employer" name="employer" value="<?php echo $employer; ?>">
 
-    						</div>
+                            </div>
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Position Description</label>
                                 <input type="text" class="form-control" placeholder="Job Description" name="description" value="<?php echo $description; ?>">
                             </div>
-                            <div class="form-group col-xs-12 floating-label-form-group controls " id="special select">
-                                <label>Position Type</label>
-                                <select class="form_control" placeholder="Position Type" name="positiontype"  >
-                                    <option value="Full-Time">Full-Time</option>
-                                    <option value="Part-Time">Part-Time</option>
-                                    <option value="Internship">Internship</option>
-                                </select>
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                              <lable>Position Type</lable>
+                              <input type="radio" name="positiontype" <?php if (isset($positiontype) && $positiontype=="Full-Time") echo "checked";?> value="Full-Time"> Full-Time
+                            
+                              <input type="radio" name="positiontype" <?php if (isset($positiontype) && $positiontype=="Part-Time") echo "checked";?> value="Part-Time"> Part-Time
+                           
+                              <input type="radio" name="positiontype" <?php if (isset($positiontype) && $positiontype=="Internship") echo "checked";?> value="Internship"> Internship
+                                
                             </div>
+
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <input type="checkbox" name="visarqment" <?php if (isset($visarqment)&& $visarqment=="H1B Required") echo "checked";?> value="H1B Required" >Require H1B Now or Future
                             </div>
-    						<div class="form-group col-xs-12">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Location</label>
+                                <select class="form-control" name="location">
+                                    <option name="location" <?php if (isset($location) && $location=="Virginia") echo "checked";?> value="Virginia">Virginia</option>
+                                    <option name="location" <?php if (isset($location) && $location=="DC") echo "checked";?> value="DC">DC</option>
+                                    <option name="location" <?php if (isset($location) && $location=="Maryland") echo "checked";?>  value="Maryland">Maryland</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-xs-12">
                                     <button type="submit" class="btn btn-success btn-lg">Submit</button>
                                 </div>
-    					</div>
-    				</form>
-    			</div>
-    		</div>
-    	</div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- Result printout area -->
     <section class="success" id="gallery">
@@ -125,6 +145,10 @@
                     <div class="col-lg-8 col-lg-offset-2 result">
                         <h3>Visa Requirement</h3>
                         <p><?php echo $_POST['visarqment']; ?></p>
+                    </div>
+                    <div class="col-lg-8 col-lg-offset-2 result">
+                        <h3>Location</h3>
+                        <p><?php echo $_POST['location']; ?></p>
                     </div>
 
                 </div>
