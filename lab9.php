@@ -12,7 +12,16 @@
     <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 </head>
 <body>
+	<!-- Jobtable Section -->
+	<section id="job-table">
+		<div class="container">
+			<div class="table-responsive">
+				<table class="table table-hover">
 
+				</table>
+			</div>
+		</div>
+	</section>
     <!-- /Footer -->
     <script src="/public/js/jquery-1.11.0.js"></script>
      <!-- Bootstrap Core JavaScript -->
