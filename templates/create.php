@@ -3,7 +3,7 @@
     <meta charset="utf-8">
 	<title>Lab8 New Job Post</title>
 	<!-- Custom CSS -->
-    <link href="public/css/lab8.css" rel="stylesheet" type="text/css">
+    <link href="public/css/jobboard.css" rel="stylesheet" type="text/css">
 	<!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
     <link href="public/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom Fonts -->
@@ -201,10 +201,10 @@
         </div>
     </footer>
     <!-- /Footer -->
-    <script src="js/jquery-1.11.0.js"></script>
+    <script src="/public/js/jquery-1.11.0.js"></script>
      <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="/public/js/bootstrap.min.js"></script>
     <!-- Custom Theme JavaScript -->
-    <script src="js/lab8.js"></script>
+    <script src="/public/js/jobboard.js"></script>
 </body>
 </html> 
