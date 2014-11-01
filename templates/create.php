@@ -3,9 +3,9 @@
     <meta charset="utf-8">
 	<title>Lab8 New Job Post</title>
 	<!-- Custom CSS -->
-    <link rel="stylesheet" type="text/css" href="css/lab8.css">
+    <link href="public/css/lab8.css" rel="stylesheet" type="text/css">
 	<!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="public/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom Fonts -->
     <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
