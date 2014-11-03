@@ -8,7 +8,7 @@
 define("DATABASE", "jobboard");
 
 // database's password
-define("PASSWORD", "YytJ9DLSy2nl");
+define("PASSWORD", "123456");
 
 // database's server
 define("SERVER", "localhost");
