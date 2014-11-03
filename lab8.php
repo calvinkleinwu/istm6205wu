@@ -109,9 +109,9 @@
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Location</label>
                                 <select class="form-control" name="location">
-                                    <option name="location" <?php if (isset($location) && $location=="Virginia") echo "checked";?> value="Virginia">Virginia</option>
-                                    <option name="location" <?php if (isset($location) && $location=="DC") echo "checked";?> value="DC">DC</option>
-                                    <option name="location" <?php if (isset($location) && $location=="Maryland") echo "checked";?>  value="Maryland">Maryland</option>
+                                    <option name="location" <?php if (isset($location) && $location=="Virginia") echo "selected";?> value="Virginia">Virginia</option>
+                                    <option name="location" <?php if (isset($location) && $location=="DC") echo "selected";?> value="DC">DC</option>
+                                    <option name="location" <?php if (isset($location) && $location=="Maryland") echo "selected";?>  value="Maryland">Maryland</option>
                                 </select>
                             </div>
                             <div class="form-group col-xs-12">
