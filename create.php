@@ -119,6 +119,7 @@
                             </div>
                             <div class="form-group col-xs-12">
                                     <button type="submit" class="btn btn-success btn-lg">Submit</button>
+                                    <a class="btn btn-info btn-lg"href="index.php">Cancel</a>
                             </div>
                         </div>
                     </form>
