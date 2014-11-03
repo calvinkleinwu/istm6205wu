@@ -5,7 +5,7 @@ class Database
     private static $dbName = 'jobboard' ;
     private static $dbHost = 'localhost' ;
     private static $dbUsername = 'root';
-    private static $dbUserPassword = '123456';
+    private static $dbUserPassword = 'YytJ9DLSy2nl';
      
     private static $cont  = null;
      
