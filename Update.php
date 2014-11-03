@@ -101,7 +101,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <form role="form" action="update.php?id=<?php echo $id?>" method="post">
+                    <form role="form" action="update.php?id=<?php echo  $id?>" method="post">
                         <div class="form-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Position Name</label>
@@ -142,7 +142,7 @@
                             </div>
                             <div class="form-group col-xs-12">
                                     <button type="submit" class="btn btn-success btn-lg">Updata</button>
-                                    <a class="btn btn-default btn-lg" href="index.php">Back</a>
+                                    <a class="btn btn-default btn-lg" href="index.php" >Back</a>
                             </div>
                         </div>
                     </form>
