@@ -51,8 +51,8 @@
             $pdo = Database::connect();
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $sql = "UPDATE jobposts SET jname = ?, employer = ?, jdescription = ?, jtype = ?, visarqment = ?,location = ? WHERE id = ?";
-            $q = $pdo->prepare($sql);
-            $q->execute(array($jname,$employer,$jdescription,$jtype,$visarqment,$location,$id));
+            $stmt = $pdo->prepare($sql);
+            $stmt->execute(array($jname,$employer,$jdescription,$jtype,$visarqment,$location,$id));
             Database::disconnect();
             header("Location: index.php");
         }

@@ -44,8 +44,8 @@
             $pdo = Database::connect();
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $sql = "INSERT INTO jobposts (jname,employer,jdescription,jtype,visarqment,location) values(?, ?, ?, ?, ?, ?)";
-            $q = $pdo->prepare($sql);
-            $q->execute(array($jname,$employer,$jdescription,$jtype,$visarqment,$location));
+            $stmt = $pdo->prepare($sql);
+            $stmt->execute(array($jname,$employer,$jdescription,$jtype,$visarqment,$location));
             Database::disconnect();
             header("Location: index.php");
         }
