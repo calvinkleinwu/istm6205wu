@@ -106,7 +106,7 @@ if ( !empty($_POST)) {
             }
 
             $conn = null;
-            header("Location: lab9/table.php");
+            header("Location: table.php");
         }
 }
 
