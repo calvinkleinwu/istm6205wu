@@ -152,7 +152,7 @@ if ( !empty($_POST)) {
                 </div>
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
-                        <form role="form" action="lab9.php" method="post">
+                        <form role="form" action="create.php" method="post">
                             <div class="form-group">
                                 <div class="form-group col-xs-12 floating-label-form-group controls">
                                     <label>Position Name</label>
