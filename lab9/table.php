@@ -1,7 +1,7 @@
 
 <!DOCTYPE HTML>
 
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
 	<title>Lab9 All Data</title>
