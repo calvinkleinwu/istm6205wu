@@ -103,7 +103,7 @@ if ( !empty($_POST)) {
             }
 
             $conn = null;
-            header("Location: table.php");
+            header("Location: lab10client.php");
         }
 }
 
