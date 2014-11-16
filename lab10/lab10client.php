@@ -27,12 +27,7 @@
   </div>
 
   <div class="form-group col-xs-12">
-        <button id="add" type="submit" class="btn btn-success btn-lg" >Add More</button>
-        <a href="lab10client.php"> <button type="submit" class="btn btn-default btn-lg">Cancle</button></a>
-  </div>
-
-  <div id="createmodual" class="">
-
+        <a href="create.php"><button id="add" type="submit" class="btn btn-success btn-lg" >Add More</button></a>
   </div>
   
   <section class="content">
@@ -46,39 +41,35 @@
     <!-- /container -->
   </section>
 
-<script type="text/javascript">
- 
-$(document).ready(function(){
-  $("#add").click(function(){
-    $("#createmodual").append('<iframe width="900px" src="../create.php"></iframe>');
-  });
-  
-  var url="lab10api.php";
-  $.getJSON(url,function(json){
-  // loop through the members here
-    $.each(json,function(i,job){
-      $("#jobposts").append(
-        '<div class="col-xs-12 col-md-6 col-lg-4">'+
-          '<div class="post-item" id="job-'+job.id+'">'+
-            '<div class="image-container">'+
-                '<img width="253" height="167" src="jobdefault.jpg">'+
-             '</div>'+
-             '<div class="content-container">'+
-                '<h1>'+job.jname+'</h1>'+
-                '<p>Employer: <em>'+job.employer+'</em>'+
-                '<p>Position Description: <em>'+job.jdescription+'</em></p>'+
-                '<p>Special Requirement: <em>'+job.jtype+ job.visarqment + '</em></p>'+
-                '<p>Location:<em>' + job.location + '</em></p>'+
-                '<hr>'+
-             '</div>'+
-          '</div>'+
-        '</div>'
-      );
+  <script type="text/javascript">
+   
+  $(document).ready(function(){
+    var url="lab10api.php";
+    $.getJSON(url,function(json){
+    // loop through the members here
+      $.each(json,function(i,job){
+        $("#jobposts").append(
+          '<div class="col-xs-12 col-md-6 col-lg-4">'+
+            '<div class="post-item" id="job-'+job.id+'">'+
+              '<div class="image-container">'+
+                  '<img width="253" height="167" src="jobdefault.jpg">'+
+               '</div>'+
+               '<div class="content-container">'+
+                  '<h1>'+job.jname+'</h1>'+
+                  '<p>Employer: <em>'+job.employer+'</em>'+
+                  '<p>Position Description: <em>'+job.jdescription+'</em></p>'+
+                  '<p>Special Requirement: <em>'+job.jtype+ job.visarqment + '</em></p>'+
+                  '<p>Location:<em>' + job.location + '</em></p>'+
+                  '<hr>'+
+               '</div>'+
+            '</div>'+
+          '</div>'
+        );
+      });
     });
   });
-});
- 
-</script>
+   
+  </script>
 
   <script src="public/js/jquery-2.1.1.min.js"></script>
   </body>
