@@ -31,7 +31,9 @@
         <a href="lab10client.php"> <button type="submit" class="btn btn-default btn-lg">Cancle</button></a>
   </div>
 
-  <div id="addwindow"></div>
+  <div id="createmodual" class="">
+
+  </div>
   
   <section class="content">
     <!-- container -->
@@ -48,7 +50,7 @@
  
 $(document).ready(function(){
   $("#add").click(function(){
-    $("#addwindow").append('<iframe width="900px" src="create.php"></iframe>');
+    $("#createmodual").append('<iframe width="900px" src="../create.php"></iframe>');
   });
   
   var url="lab10api.php";
@@ -59,7 +61,7 @@ $(document).ready(function(){
         '<div class="col-xs-12 col-md-6 col-lg-4">'+
           '<div class="post-item" id="job-'+job.id+'">'+
             '<div class="image-container">'+
-                '<img width="253" height="167" src="public/img/default.jpg">'+
+                '<img width="253" height="167" src="jobdefault.jpg">'+
              '</div>'+
              '<div class="content-container">'+
                 '<h1>'+job.jname+'</h1>'+
