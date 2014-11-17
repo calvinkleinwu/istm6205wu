@@ -55,7 +55,7 @@
                   '<h1>'+job.jname+'</h1>'+
                   '<p>Employer: <em>'+job.employer+'</em>'+
                   '<p>Position Description: <em>'+job.jdescription+'</em></p>'+
-                  '<p>Special Requirement: <em>'+job.jtype+ job.visarqment + '</em></p>'+
+                  '<p>Special Requirement: <em>'+job.jtype+ "-"+job.visarqment + '</em></p>'+
                   '<p>Location:<em>' + job.location + '</em></p>'+
                   '<hr>'+
                '</div>'+
