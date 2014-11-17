@@ -1,5 +1,5 @@
 <?php
-require_once('config.php');
+require_once ('config.php');
 //CREATE DATABASE
 try {
     $conn = new PDO("mysql:dbname=" . ";host=" . SERVER, USERNAME, PASSWORD);
@@ -103,7 +103,7 @@ if ( !empty($_POST)) {
             }
 
             $conn = null;
-            header("Location: lab10client.php");
+            header("Location: client.php");
         }
 }
 
@@ -177,7 +177,7 @@ if ( !empty($_POST)) {
                                 </div>
                                 <div class="form-group col-xs-12">
                                         <button type="submit" class="btn btn-success btn-lg">Submit</button>
-                                        <a class="btn btn-primary btn-lg" href="lab10client.php">See All</a>
+                                        <a class="btn btn-primary btn-lg" href="client.php">See All</a>
                                 </div>
                             </div>
                         </form>

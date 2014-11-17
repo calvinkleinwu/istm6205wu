@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Lab 10 jQuery and Ajax</title>
-    <link rel="stylesheet" type="text/css" href="../public/css/lab10.css">
+    <link rel="stylesheet" type="text/css" href="stlye.css">
     <link href="../public/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom Fonts -->
     <link href="../public/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -25,26 +25,23 @@
       </div>
     </div>
   </div>
-
-  <div class="form-group col-xs-12">
+  <div class="container">
+    <div class="form-group col-xs-12">
         <a href="create.php"><button id="add" type="submit" class="btn btn-success btn-lg" >Add More</button></a>
   </div>
+  </div>
   
-  <section class="content">
+  <!-- database items goes here -->
+  <section class="container" id="jobposts">
+
     <!-- container -->
-    <div class="container">
-      <div id="jobposts" class="row">
-        <!-- post item -->
-        <!-- /post item -->
-      </div>
-    </div>
     <!-- /container -->
   </section>
 
   <script type="text/javascript">
    
   $(document).ready(function(){
-    var url="lab10api.php";
+    var url="api.php";
     $.getJSON(url,function(json){
     // loop through the members here
       $.each(json,function(i,job){
