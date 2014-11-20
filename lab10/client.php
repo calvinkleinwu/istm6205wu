@@ -28,6 +28,7 @@
   <div class="container">
     <div class="form-group col-xs-12">
         <a href="create.php"><button id="add" type="submit" class="btn btn-success btn-lg" >Add More</button></a>
+        <a href="api.php"><button class="btn btn-warning btn-lg">Check API</button></a>
   </div>
   </div>
   
