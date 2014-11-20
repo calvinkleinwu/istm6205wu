@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Lab 10 jQuery and Ajax</title>
-    <link rel="stylesheet" type="text/css" href="stlye.css">
+    <link href="../public/css/jobboard.css"rel="stylesheet" type="text/css">
     <link href="../public/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom Fonts -->
     <link href="../public/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -32,8 +32,9 @@
   </div>
   
   <!-- database items goes here -->
-  <section class="container" id="jobposts">
+  <section class="container" id="jobposts" style="
 
+  background-color:steelblue;">
     <!-- container -->
     <!-- /container -->
   </section>
@@ -46,16 +47,16 @@
     // loop through the members here
       $.each(json,function(i,job){
         $("#jobposts").append(
-          '<div class="col-xs-12 col-md-6 col-lg-4">'+
+          '<div class="">'+
             '<div class="post-item" id="job-'+job.id+'">'+
-              '<div class="image-container">'+
+              '<div style="padding: 20px;" class="col-lg-4 image-container">'+
                   '<img width="253" height="167" src="jobdefault.jpg">'+
                '</div>'+
-               '<div class="content-container">'+
+               '<div class="col-lg-offset-4">'+
                   '<h1>'+job.jname+'</h1>'+
                   '<p>Employer: <em>'+job.employer+'</em>'+
                   '<p>Position Description: <em>'+job.jdescription+'</em></p>'+
-                  '<p>Special Requirement: <em>'+job.jtype+ "-"+job.visarqment + '</em></p>'+
+                  '<p>Special Requirement: <em>'+job.jtype+ job.visarqment + '</em></p>'+
                   '<p>Location:<em>' + job.location + '</em></p>'+
                   '<hr>'+
                '</div>'+
