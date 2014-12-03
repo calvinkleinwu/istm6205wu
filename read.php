@@ -1,28 +1,13 @@
 <?php
-    require 'include/functions.php';
-    $id = null;
-    if ( !empty($_GET['id'])) {
-        $id = $_REQUEST['id'];
-    }
-     
-    if ( null==$id ) {
-        header("Location: index.php");
-    } else {
-        $pdo = Database::connect();
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = "SELECT * FROM jobposts where id = ?";
-        $stmt = $pdo->prepare($sql);
-        $stmt->execute(array($id));
-        $data = $q->fetch(PDO::FETCH_ASSOC);
-        Database::disconnect();
-    }
+    include 'include/read.php';
 ?>
- 
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
 	<head>
 	    <meta charset="utf-8">
-		<title>Lab8 Select Data</title>
+		<title>View a Job</title>
+		<!-- Bookmark Logo -->
+		<link rel="shortcut icon" href="public/img/profile.png">
 		<!-- Custom CSS -->
 	    <link href="public/css/jobboard.css" rel="stylesheet" type="text/css">
 		<!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
@@ -38,7 +23,7 @@
             <div class="container">
                     <div class="row">
                     	<div class="col-lg-12 text-center">
-                        	<h3>Current Job Opportunity</h3>
+                        	<h3>View Job Opportunity</h3>
                     	</div>
                     </div>
                     

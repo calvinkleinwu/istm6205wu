@@ -1,70 +1,26 @@
-<!DOCTYPE html>
 <?php
-     
-    require 'include/functions.php';
- 
-    if ( !empty($_POST)) {
-        // keep track validation errors
-        $jnameError = null;
-         
-        // keep track post values
-        $jname = $_POST['jname'];
-        $employer = $_POST['employer'];
-        $jtype = $_POST['jtype'];
-        $jdescription = $_POST['jdescription'];
-        $visarqment = $_POST['visarqment'];
-        $location = $_POST['location'];
-         
-        // validate input
-        $valid = true;
-        if (empty($jname)) {
-            $jnameError = 'Please enter Name';
-            $valid = false;
-        }
-         
-        if (empty($employer)) {
-            $employer = '';
-        } 
-         
-        if (empty($jdescription)) {
-            $jdescription = '';
-        } 
+    include 'include/create.php';
 
-        if (empty($jtype)) {
-            $jtype = '';
-        } 
-
-        if (empty($visarqment)) {
-            $visarqment = '';
-        } 
-        
-         
-        // insert data
-        if ($valid) {
-            $pdo = Database::connect();
-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $sql = "INSERT INTO jobposts (jname,employer,jdescription,jtype,visarqment,location) values(?, ?, ?, ?, ?, ?)";
-            $stmt = $pdo->prepare($sql);
-            $stmt->execute(array($jname,$employer,$jdescription,$jtype,$visarqment,$location));
-            Database::disconnect();
-            header("Location: index.php");
-        }
-    }
 ?>
+<!DOCTYPE HTML>
 <html>
-<head>
-    <meta charset="utf-8">
-	<title>Lab8 Data Insert</title>
-	<!-- Custom CSS -->
-    <link href="../public/css/jobboard.css" rel="stylesheet" type="text/css">
-	<!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
-    <link href="../public/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom Fonts -->
-    <link href="../public/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-</head>
-<body>
+    <head>
+        <meta charset="utf-8">
+    	<title>Post New Job</title>
+        <!-- Bookmark Logo -->
+        <link rel="shortcut icon" href="public/img/profile.png">
+    	<!-- Custom CSS -->
+        <link href="../public/css/jobboard.css" rel="stylesheet" type="text/css">
+    	<!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+        <link href="../public/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom Fonts -->
+        <link href="../public/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+
+        <body>
 
     <!-- Input Form -->
     <section id="new application form">
@@ -82,8 +38,9 @@
                         <div class="form-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Position Name</label>
-                                <input type="text" class="form-control" placeholder="Position Name" name="jname" value="<?php echo !empty($jname)?$jname:''; ?>">
-                                
+                                <input type="text" class="form-control" placeholder="Position Name" name="jname" 
+                                value="<?php echo !empty($jname)?$jname:''; ?>" required >
+                                <p class="help-block text-danger"></p>
                             </div> 
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Employer Information</label>
@@ -180,5 +137,8 @@
     <script src="/public/js/bootstrap.min.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="/public/js/jobboard.js"></script>
+    <!-- Data Validation Javascript-->
+    <script src="/public/js/jqBootstrapValidation.js"></script>
+    <script src="/public/js/validation.js"></script>
 </body>
 </html> 

@@ -2,7 +2,8 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Lab8 New Job Post</title>
+    <title>New Job Post</title>
+    <link rel="shortcut icon" href="public/img/profile.png">
     <!-- Custom CSS -->
     <link href="public/css/jobboard.css" rel="stylesheet" type="text/css">
     <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->

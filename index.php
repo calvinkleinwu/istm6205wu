@@ -1,12 +1,12 @@
-
 <!DOCTYPE HTML>
-
 <html>
 <head>
     <meta charset="utf-8">
-	<title>Lab8 All Data</title>
+	<title>Catch UJob</title>
+    <!-- Bookmark Logo -->
+    <link rel="shortcut icon" href="public/img/profile.png">
 	<!-- Custom CSS -->
-    <link href="public/css/jobboard.css" rel="stylesheet" type="text/css">
+    <link href="public/css/freelancer.css" rel="stylesheet" type="text/css">
 	<!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
     <link href="public/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom Fonts -->
@@ -14,7 +14,42 @@
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 </head>
-<body>
+<body id="page-top" class="index">
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top">Catch UJOB</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="">Documents</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#about">Labs</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#contact">About</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
 
 	<!-- Jobtable Section -->
 	<section id="job-table">
@@ -65,7 +100,6 @@
             </div>
 		</div>
 	</section>
-
 	<!-- Footer -->
     <footer class="text-center">
         <div class="footer-above">
@@ -113,6 +147,11 @@
         </div>
     </footer>
     <!-- /Footer -->
+    <div class="scroll-top page-scroll visible-xs visble-sm">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
     <script src="public/js/jquery-1.11.0.js"></script>
      <!-- Bootstrap Core JavaScript -->
     <script src="public/js/bootstrap.min.js"></script>
