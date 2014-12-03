@@ -6,7 +6,7 @@
     <!-- Bookmark Logo -->
     <link rel="shortcut icon" href="public/img/profile.png">
 	<!-- Custom CSS -->
-    <link href="public/css/freelancer.css" rel="stylesheet" type="text/css">
+    <link href="public/css/jobboard.css" rel="stylesheet" type="text/css">
 	<!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
     <link href="public/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom Fonts -->
@@ -16,16 +16,10 @@
 </head>
 <body id="page-top" class="index">
     <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
                 <a class="navbar-brand" href="#page-top">Catch UJOB</a>
             </div>
 
