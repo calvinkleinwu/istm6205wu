@@ -1,16 +1,16 @@
-										##############################################
-														Project Document
-													ISTM 6205 Internet Computing 
-													George Washington University 
-															Kaichang Wu
-															Dec 2, 2014
-										###############################################
+##############################################
+				Project Document
+			ISTM 6205 Internet Computing 
+			George Washington University 
+					Kaichang Wu
+					Dec 2, 2014
+###############################################
 URL: http://ec2-54-86-65-195.compute-1.amazonaws.com/ 
 
 Public IP: 54.86.65.195
-														####################
-														      Summary
-														###################
+####################
+      Summary
+###################
 My project is to build a simple job tracking board to help graduate students manage their job searching and application process. So by using this web application, users could focus on looking for job opportunities and saving all important information conveniently.
 ##################
 Main Functions:
