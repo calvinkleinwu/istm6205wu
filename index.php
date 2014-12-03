@@ -54,10 +54,12 @@
 	<!-- Jobtable Section -->
 	<section id="portfolio">
 		<div class="container">
-			<div class="col-lg-12 text-center">
-                    <h2>ALL OPPORTUNITIES</h2>
-                    <span>Kaichang Wu</span>
-                    <hr class="star-primary">
+            <div class="row">
+    			<div class="col-lg-12 text-center">
+                        <h2>ALL OPPORTUNITIES</h2>
+                        <span>Kaichang Wu</span>
+                        <hr class="star-primary">
+                </div>
             </div>
 			<div class="table-responsive">
 				<table class="table table-hover">
