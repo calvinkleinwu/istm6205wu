@@ -155,7 +155,7 @@
         </a>
     </div>
     <!-- jQuery -->
-    <script src="public/js/jquery-1.11.0.js"></script>
+    <script src="public/js/jquery.js"></script>
      <!-- Bootstrap Core JavaScript -->
     <script src="public/js/bootstrap.min.js"></script>
     <!-- Plugin JavaScript -->

@@ -32,22 +32,34 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
                     <form role="form" action="update.php?id=<?php echo  $id?>" method="post">
-                        <div class="form-group">
+                        <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Position Name</label>
-                                <input type="text" class="form-control" placeholder="Position Name" name="jname" value="<?php echo !empty($jname)?$jname:''; ?>">
-                                
+                                <input type="text" class="form-control" placeholder="Position Name" id="jname" name="jname" 
+                                value="<?php echo !empty($jname)?$jname:''; ?>" 
+                                required data-validation-required-message="Please enter the Positionname.">
+                                <p class="help-block text-danger"></p>
                             </div> 
+                        </div> 
+                        <div class="row control-group">   
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Employer Information</label>
-                                <input type="text" class="form-control" placeholder="Employer" name="employer" value="<?php echo !empty($employer)?$employer:''; ?>">
+                                <input type="text" class="form-control" placeholder="Employer" id="employer" name="employer" 
+                                value="<?php echo !empty($employer)?$employer:''; ?>" 
+                                required data-validation-required-message="Please enter the employer name.">
+                                <p class="help-block text-danger"></p>
                             </div>
-
+                        </div>
+                        <div class="row control-group">    
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Position Description</label>
-                                <input type="text" class="form-control" placeholder="Job Description" name="jdescription" value="<?php echo !empty($jdescription)?$jdescription:'';?>">
+                                <input type="text" class="form-control" placeholder="Job Description" id="jdescription" name="jdescription" 
+                                value="<?php echo !empty($jdescription)?$jdescription:'';?>" 
+                                required data-validation-required-message="Please provide job description.">
+                                <p class="help-block text-danger"></p>
                             </div>
-                            
+                        </div>
+                        <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                               <lable>Position Type</lable>
                               <input type="radio" name="jtype" <?php if (isset($jtype) && $jtype=="Full-Time") echo "checked";?> value="Full-Time"> Full-Time
@@ -57,23 +69,28 @@
                               <input type="radio" name="jtype" <?php if (isset($jtype) && $jtype=="Internship") echo "checked";?> value="Internship"> Internship
                                 
                             </div>
-                            
+                        </div>
+                        <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <input type="checkbox" name="visarqment" <?php if (isset($visarqment) && $visarqment=="H1B Required") echo "checked";?> value="H1B Required" >Require H1B Now or Future
+                                <input type="checkbox" id=" visarqment" name="visarqment" <?php if (isset($visarqment) && $visarqment=="Internship") echo "checked";?> 
+                                value="H1B Required" required data-validation-required-message="Please specify VISA requirement.">Require H1B Now or Future
+                                <p class="help-block text-danger"></p>
                             </div>
-                            
+                        </div>
+                        <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Location</label>
                                 <select class="form-control" name="location">
-                                    <option name="location" <?php if (isset($location) && $location=="Virginia") echo "selected";?> value="Virginia">Virginia</option>
-                                    <option name="location" <?php if (isset($location) && $location=="DC") echo "selected";?> value="DC">DC</option>
-                                    <option name="location" <?php if (isset($location) && $location=="Maryland") echo "selected";?> value="Maryland">Maryland</option>
+                                    <option name="location" <?php if (isset($location) && $location=="Virginia") echo "checked";?> value="Virginia">Virginia</option>
+                                    <option name="location" <?php if (isset($location) && $location=="DC") echo "checked";?> value="DC">DC</option>
+                                    <option name="location" <?php if (isset($location) && $location=="Maryland") echo "checked";?> value="Maryland">Maryland</option>
                                 </select>
                             </div>
-                            <div class="form-group col-xs-12">
-                                    <button type="submit" class="btn btn-success btn-lg">Updata</button>
-                                    <a class="btn btn-default btn-lg" href="index.php" >Back</a>
-                            </div>
+                        </div>
+
+                        <div class="form-group col-xs-12">
+                                <button type="submit" class="btn btn-success btn-lg">Submit</button>
+                                <a class="btn btn-info btn-lg"href="index.php">Cancel</a>
                         </div>
                     </form>
                 </div>
@@ -127,9 +144,19 @@
         </div>
     </footer>
     <!-- /Footer -->
-    <script src="public/js/jquery-1.11.0.js"></script>
-     <!-- Bootstrap Core JavaScript -->
+    <!-- jQuery -->
+    <script src="public/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
     <script src="public/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="public/js/jqBootstrapValidation.js"></script>
+    <script src="public/js/validate.js"></script>
+
     <!-- Custom Theme JavaScript -->
     <script src="public/js/jobboard.js"></script>
 </body>
