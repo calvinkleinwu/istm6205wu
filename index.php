@@ -36,7 +36,7 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="">Documents</a>
+                        <a href="README.md">Documents</a>
                     </li>
                     <li class="page-scroll">
                         <a href="#about">Labs</a>
