@@ -16,10 +16,16 @@
 </head>
 <body id="page-top" class="index">
     <!-- Navigation -->
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
                 <a class="navbar-brand" href="#page-top">Catch UJOB</a>
             </div>
 
@@ -146,9 +152,12 @@
             <i class="fa fa-chevron-up"></i>
         </a>
     </div>
+    <!-- jQuery -->
     <script src="public/js/jquery-1.11.0.js"></script>
      <!-- Bootstrap Core JavaScript -->
     <script src="public/js/bootstrap.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="js/cbpAnimatedHeader.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="public/js/jobboard.js"></script>
 </body>
