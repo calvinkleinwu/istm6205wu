@@ -39,12 +39,16 @@
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Position Name</label>
                                 <input type="text" class="form-control" placeholder="Position Name" name="jname" 
-                                value="<?php echo !empty($jname)?$jname:''; ?>" required >
+                                value="<?php echo !empty($jname)?$jname:''; ?>" required data-validation-required-
+                                message="Please enter PositionName.">
                                 <p class="help-block text-danger"></p>
                             </div> 
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Employer Information</label>
-                                <input type="text" class="form-control" placeholder="Employer" name="employer" value="<?php echo !empty($employer)?$employer:''; ?>">
+                                <input type="text" class="form-control" placeholder="Employer" name="employer" 
+                                value="<?php echo !empty($employer)?$employer:''; ?>" required data-validation-required-
+                                message="Please enter Employer.">
+                                <p class="help-block text-danger"></p>
                             </div>
 
                             <div class="form-group col-xs-12 floating-label-form-group controls">
@@ -63,7 +67,9 @@
                             </div>
                             
                             <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <input type="checkbox" name="visarqment" <?php if (isset($visarqment) && $visarqment=="Internship") echo "checked";?> value="H1B Required" >Require H1B Now or Future
+                                <input type="checkbox" name="visarqment" <?php if (isset($visarqment) && $visarqment=="Internship") 
+                                echo "checked";?> value="H1B Required" equired data-validation-required-
+                                message="Please enter Visa Requirement.">Require H1B Now or Future
                             </div>
                             
                             <div class="form-group col-xs-12 floating-label-form-group controls">
