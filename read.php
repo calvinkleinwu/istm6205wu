@@ -18,18 +18,54 @@
 	    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 	</head>
  
-	<body>
+	<body id="page-top">
+		<!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top">Catch UJOB</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="README.md">Documents</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#about">Labs</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#contact">About</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
 		<section class="success" id="gallery">
             <div class="container">
                     <div class="row">
                     	<div class="col-lg-12 text-center">
-                        	<h3>View Job Opportunity</h3>
+                        	<h2>View Job Opportunity</h2>
                     	</div>
                     </div>
                     
                     <div class="row" >
 		                      <div class="col-lg-8 col-lg-offset-2 result">
-		                        <h3>Position Name</h3>
+		                        <h3>Position Name</h3><hr>
 		                        <div class="controls">
 		                            <label class="checkbox">
 		                                <?php echo $data['jname'];?>
@@ -37,14 +73,15 @@
 		                        </div>
 		                      </div>
 		                      <div class="col-lg-8 col-lg-offset-2">
-		                        <h3>Employer</h3>                       <div class="controls">
+		                        <h3>Employer</h3><hr>                      
+		                        <div class="controls">
 		                            <label class="checkbox">
 		                                <?php echo $data['employer'];?>
 		                            </label>
 		                        </div>
 		                      </div>
 		                      <div class="col-lg-8 col-lg-offset-2">
-		                        <h3>Job Description</h3>
+		                        <h3>Job Description</h3><hr>
 		                        <div class="controls">
 		                            <label class="checkbox">
 		                                <?php echo $data['jdescription'];?>
@@ -52,14 +89,15 @@
 		                        </div>
 		                      </div>
 		                      <div class="col-lg-8 col-lg-offset-2">
-		                        <h3>Job Type</h3>                       <div class="controls">
+		                        <h3>Job Type</h3><hr>                       
+		                        <div class="controls">
 		                            <label class="checkbox">
 		                                <?php echo $data['jtype'];?>
 		                            </label>
 		                        </div>
 		                      </div>
 		                      <div class="col-lg-8 col-lg-offset-2">
-		                        <h3>Visa Requiremen</h3>
+		                        <h3>Visa Requiremen</h3><hr>
 		                        <div class="controls">
 		                            <label class="checkbox">
 		                                <?php echo $data['visarqment'];?>
@@ -67,14 +105,15 @@
 		                        </div>
 		                      </div>
 		                      <div class="col-lg-8 col-lg-offset-2">
-		                        <h3>Location</h3>                       <div class="controls">
+		                        <h3>Location</h3><hr>                       
+		                        <div class="controls">
 		                            <label class="checkbox">
 		                                <?php echo $data['location'];?>
 		                            </label>
 		                        </div>
 		                      </div>
 		                      <div class="col-lg-8 col-lg-offset-2">
-	                    		 <a class="btn btn-primary" href="index.php">Back</a>
+	                    		 <a class="btn btn-primary btn-lg" href="index.php">Back</a>
 	                		  </div>
                     </div>
 	    	</div> 
@@ -127,11 +166,16 @@
         </div>
     </footer>
     <!-- /Footer -->
-    <script src="/public/js/jquery-1.11.0.js"></script>
+    <!-- jQuery -->
+    <script src="public/js/jquery.js"></script>
      <!-- Bootstrap Core JavaScript -->
-    <script src="/public/js/bootstrap.min.js"></script>
+    <script src="public/js/bootstrap.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="public/js/classie.js"></script>
+    <script src="public/js/cbpAnimatedHeader.js"></script>
     <!-- Custom Theme JavaScript -->
-    <script src="/public/js/jobboard.js"></script>
+    <script src="public/js/jobboard.js"></script>
  	</body>
 </html>
 
