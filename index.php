@@ -52,7 +52,7 @@
     </nav>
 
 	<!-- Jobtable Section -->
-	<section id="job-table">
+	<section id="portfolio">
 		<div class="container">
 			<div class="col-lg-12 text-center">
                     <h2>ALL OPPORTUNITIES</h2>
