@@ -1,9 +1,9 @@
 ##############################################
-				Project Document
-			ISTM 6205 Internet Computing 
-			George Washington University 
-					Kaichang Wu
-					Dec 2, 2014
+	Project Document
+ISTM 6205 Internet Computing 
+George Washington University 
+	Kaichang Wu
+	Dec 2, 2014
 ###############################################
 URL: http://ec2-54-86-65-195.compute-1.amazonaws.com/ 
 
