@@ -155,8 +155,6 @@
 
     <!-- Contact Form JavaScript -->
     <script src="public/js/jqBootstrapValidation.js"></script>
-    <script src="public/js/validate.js"></script>
-
     <!-- Custom Theme JavaScript -->
     <script src="public/js/jobboard.js"></script>
 </body>
