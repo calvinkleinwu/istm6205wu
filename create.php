@@ -156,7 +156,7 @@
 <script src="public/js/bootstrap.min.js"></script>
 
 <!-- Plugin JavaScript -->
-<script src="js/cbpAnimatedHeader.js"></script>
+<script src="public/js/cbpAnimatedHeader.js"></script>
 
 <!-- Contact Form JavaScript -->
 <script src="public/js/jqBootstrapValidation.js"></script>
