@@ -31,7 +31,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <form role="form" action="update.php?id=<?php echo  $id?>" method="post">
+                    <form role="form" action="update.php?id=<?php echo  $id?>" method="post" novalidate>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Position Name</label>
@@ -73,7 +73,7 @@
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <input type="checkbox" id=" visarqment" name="visarqment" <?php if (isset($visarqment) && $visarqment=="Internship") echo "checked";?> 
-                                value="H1B Required" required data-validation-required-message="Please specify VISA requirement.">Require H1B Now or Future
+                                value="H1B Required">Require H1B Now or Future
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
@@ -155,6 +155,8 @@
 
     <!-- Contact Form JavaScript -->
     <script src="public/js/jqBootstrapValidation.js"></script>
+    <script src="public/js/validate.js"></script>
+    
     <!-- Custom Theme JavaScript -->
     <script src="public/js/jobboard.js"></script>
 </body>
