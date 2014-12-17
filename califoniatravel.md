@@ -1,0 +1,49 @@
+CALIFORNIA WINTER BREAK
+Wednes, 17Dec
+ San Jose, Stanford University
+Cliff House悬崖小屋
+金门大桥
+九曲花街Lombard Street
+Japan Town(不知道有没有吃的）－－Arang Restaurant
+
+
+Thursday, 18Dec [1号公路San Jose - Morrow Bay］
+早 17 mile drive (私人公路）
+ Carmel(早午饭）
+Bixby Canyon Bridge
+Pfeiffer Big Sur State Park
+McWay Falls
+Heast Castle(赫兹古堡）
+Morrow Bay(晚）
+
+Friday, 19Dec [1号公路＋Los Angeles]
+San Luis Obispo
+Solvang(丹麦镇）
+San Barbara(路过）
+
+Santa Monica Beach 
+Venice Beach
+Griffith Park
+Hollywood Sign
+Little Tokyo小东京（美食街）
+LA Airport Four Point Hotel(酒店）
+Saturday, 20Dec[Los Angeles]
+Beverly Hills比弗利山庄（开车路过）
+Hollywood Walk of Frame(好莱坞星光大道)
+Madame Tussauds杜莎夫人蜡像馆
+Joshua Tree National Park（傍晚）
+Las Vegas New York New York(酒店）
+
+Sunday, 21Dec[Las Vegas－胡夫水坝－Las Vegas]
+Las Vegas New York New York(酒店）
+Monday, 22Dec[Las Vegas ]
+Las Vegas New York New York(酒店）
+Las Vegas 市区游览
+
+Tuesday, 23Dec[Las Vegas - Death Valley - Bakersfield]
+Bakersfield (酒店）
+死亡谷
+Wed, 24Dec[Bakersfield - San Francisco]
+早起7:00am 出发
+恶魔岛
+San Jose(酒店
